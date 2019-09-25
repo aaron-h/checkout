@@ -13,7 +13,7 @@ $ java -Dserver.port=8090  -jar target/checkout-0.0.1-SNAPSHOT.jar
 ```
 Test the api with curl in another terminal
 ```
-curl -H "Content-Type:application/json" -X POST --data '["001","003","001","002","001","002","003"]' t:8090/checkout
+$ curl -H "Content-Type:application/json" -X POST --data '["001","003","001","002","001","002","003"]' http://localhost:8090/checkout
 
 ```
 ### Building
@@ -27,6 +27,7 @@ Watch catalogue
 Below is a catalogue of four watches and their associated prices:
 
 |Watch ID |   Watch Name  |  Unit Price   |  Discount
+|---------|:-------------:| -------------:|-----------
 |001      |   Rolex       |  100          |  3 for 200
 |002      |   Michael Kors|  80           |2 for 120
 |003      |   Swatch      |  50           |
