@@ -14,8 +14,14 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-/**
+/** An Api for online shopping checkout process
+ *  Path: /checkout
+ *  Request body: an array of String ids
+ *  Response: the total price of the item list
+ *  Sample request i.e. post:/checkout  body: ["001","002","003"] response:{"price":230.0}
+ *
  * @author Aaron
+ *
  */
 @RestController
 @RequestMapping("/checkout")
@@ -28,6 +34,12 @@ public class CheckoutController {
     @Autowired
     private WatchCatalogueService watchCatalogueService;
 
+    /**
+     *
+     * @param watchIds a String  array of watch ids
+     * @return items total price
+     *
+     */
     @PostMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
     public Map checkout(@RequestBody String[] watchIds) {
         if (null == watchIds || watchIds.length < 1)
