@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8080
+  application:
+    name: checkout-service
+
+datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/test
+    username: root
+    password: 123456
