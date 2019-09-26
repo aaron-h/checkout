@@ -8,7 +8,7 @@ The service providing an api for shopping cart items price calculation.
 Env: jdk1.8
 From a command line in a Terminal window you can use the java -jar command to run jar package
 ```
-$ java -Dserver.port=8090  -jar target/checkout-0.0.1-SNAPSHOT.jar
+$ java -Dserver.port=8090  -jar checkout-0.0.1-SNAPSHOT.jar
 
 ```
 Test the api with curl in another terminal
